@@ -5,9 +5,7 @@ window.addEventListener("load", (event) => {
     category="cricket";
     url=`https://newsdata.io/api/1/news?apikey=${KEY}&q=${category}`;
     api1call();
-    setTimeout(()=>{
-        api2call();
-    },2000);
+    api2call();
   });
 //Menubar
 const menuicon =document.querySelector("#menuicon")
