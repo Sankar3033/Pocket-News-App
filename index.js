@@ -59,17 +59,9 @@ function updateData(articles) {
     const cardsContainer = document.querySelector(".maincontent")
     const Template = document.getElementById("template");
     console.log(articles);
-    const err = document.querySelector(".error");
-    if(articles.length===0){
-        err.classList.add("erroractive");
-        erroractive=true;
+    if(articles.length===0 | articles==undefined){
         console.log("Error");
         return;
-    }
-    else{
-        if(erroractive){
-            err.classList.remove("erroractive");
-        }
     }
     if(newSearch){
         cardsContainer.innerHTML = "";
