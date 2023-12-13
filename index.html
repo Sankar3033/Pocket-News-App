@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pocket News App</title>
+        <link rel="icon" href="./Images/icon.png"/>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+<body>
+    <div class="header">
+        <header class="width">
+            <nav>
+                <p><i class="fa-solid fa-globe"></i>Pocket News App</p>
+                <div class="navlinks">
+                    <a href="https://www.linkedin.com/in/gowri-sankar-t-80a927265/ " target="_blank">About</a>
+                    <a href="mailto:gowrisankar.3033@gmail.com">Contact us</a>
+                    <div id="modebutton" onmousedown="myFunction()">
+                        <input type="checkbox" id="mode">
+                        <label for="mode" class="button"></label>
+                    </div>
+                    <i onmousedown="menubutton()" class="fa-solid fa-bars" id="menuicon"></i>
+                    <i onmousedown="closebutton()" class="fa-solid fa-circle-xmark" id="closeicon"></i>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="menuitems" >
+        <a href="./index.html">Home</a>
+        <a href="https://www.linkedin.com/in/gowri-sankar-t-80a927265/">About</a>
+        <a href="mailto:gowrisankar.3033@gmail.com">Contact us</a>
+    </div>
+    <div class="content">
+        <div class="searchbar width">
+            <input id="searchinput" type="text" placeholder="Search"><i class="fa fa-search" aria-hidden="true" onmousedown="searchfunc()"></i>
+        </div>
+        <div class="options width">
+            <div class="categoriesbox box">
+                <span class="Categories">Categories :</span>
+                <select id="Categories">
+                    <option value="Top Headlines">Top Headlines</option>
+                    <option value="business">Business</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="general">General</option>
+                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                </select>
+            </div>
+            <div class="countrybox box">
+                <span class="Country">Country :</span>
+                <select id="Country">
+                    <option value="in">India</option>
+                    <option value="us">United States</option>
+                    <option value="gb">United Kingdom</option>
+                    <option value="ar">Argentina</option>
+                    <option value="pt">Portugal</option>
+                    <option value="il">Israel</option>
+                    <option value="cn">China</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="maincontent">
+        <div class="error">
+            <img src="./Images/error.jpg">
+            <p class="error-desc">Oops!! There's an error.Try again.</p>
+        </div>
+    </div>
+    <template id="template">
+        <div class="card" onmousedown="newsClicked(this)">
+            <img crossorigin="anonymous" onerror="errorimage(this,this.parentElement)" src="./Images/news-1172463_1280.jpg" alt="News Image">
+            <div class="news-info">
+                <h3 class="title">Kashvee Gautam fetched INR 2 crore from Gujarat Giants, making her the most expensive player in the WPL auction.</h3>
+                <h6 class="news-source">Source : Times of India ˙ 30:03:2023 </h6>
+                <p class="news-desc">In</p>
+                <span id="Redirect">Click Here to Read full Artile</span>
+            </div>
+        </div>
+    </template>
+    <script src="./index.js" ></script>
+</body>
+</html>
