@@ -59,7 +59,8 @@ function updateData(articles) {
     const cardsContainer = document.querySelector(".maincontent")
     const Template = document.getElementById("template");
     console.log(articles);
-    if(articles.length===0 | articles==undefined){
+    if(articles==undefined) return;
+    if(articles.length===0 ){
         console.log("Error");
         return;
     }
@@ -166,7 +167,7 @@ function onSelectChanged2()
     category = catarr[cat.selectedIndex];
     url2=`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${KEY2}`;
     api2call();
-    if(category==sports){
+    if(category=="sports"){
         category=cricket;
         url=`https://newsdata.io/api/1/news?apikey=${KEY}&q=${category}`;
         api1call();
