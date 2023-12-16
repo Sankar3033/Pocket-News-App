@@ -117,7 +117,7 @@ window.addEventListener('keydown',(event)=>{
 });
 
 //API2 handling
-const KEY2 = "2d043bcc20f14b61a00c88408283481d"
+const KEY2 = "fda15a9b405b4f5dbfe999d756eca74c"
 let country = "in";
 let category = "Sports"
 let url2=`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${KEY2}`;
